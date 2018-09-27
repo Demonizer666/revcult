@@ -1,0 +1,124 @@
+/** Regular Table (Table CSS + Flex Css) **/
+
+.regular_table {
+    border-spacing: 0;
+    font-size: 16px;
+    min-width: 640px;
+}
+
+.regular_table.center tr td {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.regular_table,
+.regular_table__head_row,
+.regular_table__head_cell {
+    border-collapse: collapse;
+}
+
+.regular_table__head {
+    background-color: #fff;
+    font-weight: 600;
+    position: sticky;
+    color: #787878;
+    font-size: 14px;
+}
+
+.regular_table__head_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.regular_table__head_title {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.regular_table__head_buttons .icon_svg_container {
+    margin-right: 8px;
+}
+
+.regular_table__head_buttons .icon_svg_container:last-of-type {
+    margin-right: 0;
+}
+
+.regular_table__head_buttons .icon_svg_container.active svg {
+    fill: #000033;
+}
+
+.regular_table__head_row {
+    border-bottom: 1px solid #ececec;
+}
+
+.regular_table__head_cell {
+    padding: 12px 8px;
+    resize: horizontal;
+    overflow: hidden;;
+    background-color: #fff;
+    position: relative;
+}
+
+.regular_table__head_cell:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    border: 6px solid transparent;
+    border-right: 5px solid #444;
+    border-bottom: 5px solid #444;
+    cursor: e-resize;
+}
+
+.regular_table__body {
+    background-color: #ffffff;
+    overflow: auto;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.regular_table__body_row {
+    border-bottom: 1px solid #ececec;
+    transition: 0.1s;
+}
+
+.regular_table__body_row:last-of-type {
+    border-bottom: none;
+}
+
+.regular_table__body_row:hover {
+    background-color: #ccf;
+}
+
+.regular_table__body_cell {
+    padding: 4px 8px;
+}
+
+/** Modifications **/
+
+.regular_table.density_high .regular_table__body_cell {
+    padding: 4px 8px;
+}
+
+.regular_table.density_average .regular_table__body_cell {
+    padding: 8px 8px;
+}
+
+.regular_table.density_low .regular_table__body_cell {
+    padding: 12px 8px;
+}
+
+.regular_table.zebra .regular_table__body_row:nth-of-type(2n) {
+    background-color: #ececec;
+}
+
+.regular_table.zebra .regular_table__body_row:hover {
+    background-color: #ccf;
+}
+
+.regular_table.sticky .regular_table__head_cell {
+    position: sticky;
+    top: 32px;
+}

@@ -1,0 +1,10 @@
+<div class="modal__body">
+    <div class="modal__close modalClose"></div>
+    <div class="modal__container">
+        Привет <%
+        jQuery.each(names, function() {
+            %><%= this %>, <%
+        });
+        %>!
+    </div>
+</div>
