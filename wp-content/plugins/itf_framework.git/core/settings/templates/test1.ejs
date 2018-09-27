@@ -1,0 +1,14 @@
+<%
+ jQuery.each( testfields, function (key, field) { %>
+    <div class="settings_field_container">
+        <%- regular_field.render(field); %>
+    </div>
+ <% });
+ %>
+
+<div class="settings_field_container">
+    <span class="itf_submit MyTestButton">
+        Отправить
+        <span class="icon_svg_container medium"><svg><use href="#loading"></use></svg></span>
+    </span>
+</div>

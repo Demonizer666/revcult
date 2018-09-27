@@ -1,0 +1,604 @@
+@import "settings.css";
+@import "modal.css";
+@import "buttons.css";
+@import "typography.css";
+@import "table.css";
+@import "interface.css";
+@import "jpicker-1.1.6.css";
+@import "datepicker.min.css";
+
+body * {
+    box-sizing: border-box;
+}
+
+/* SVG Icons */
+
+.icon_svg_container {
+    display: inline-flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+}
+
+.icon_svg_container svg {
+    transition: 0.4s;
+    fill: #888;
+}
+
+.icon_svg_container.huge {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_svg_container.huge svg {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_svg_container.large {
+    width: 32px;
+    height: 32px;
+}
+
+.icon_svg_container.large svg {
+    width: 32px;
+    height: 32px;
+}
+
+.icon_svg_container.medium {
+    width: 24px;
+    height: 24px;
+}
+
+.icon_svg_container.medium svg {
+    width: 24px;
+    height: 24px;
+}
+
+.icon_svg_container.small {
+    width: 16px;
+    height: 16px;
+}
+
+.icon_svg_container.small svg {
+    width: 16px;
+    height: 16px;
+}
+.icon_svg_container svg:hover {
+    fill: #3abdeb;
+}
+
+.icon_svg_container.round {
+    border: 1px solid #888;
+    border-radius: 50%;
+}
+
+.icon_svg_container.round:hover {
+    border: 1px solid #3abdeb;
+}
+
+.icon_svg_container.small.round {
+    width: 24px;
+    height: 24px;
+}
+
+.icon_svg_container.medium.round {
+    width: 32px;
+    height: 32px;
+}
+
+.icon_svg_container.large.round {
+    width: 40px;
+    height: 40px;
+}
+
+.icon_svg_container.huge.round {
+    width: 50px;
+    height: 50px;
+}
+
+.itf_icons_container {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.itf_icons_container i {
+    transition: 0.4s;
+    color: #ccc;
+}
+
+.itf_icons_container.small {
+    height: 16px;
+    width: 16px;
+}
+
+.itf_icons_container.small i {
+    font-size: 16px;
+    line-height: 16px;
+}
+.itf_icons_container.medium {
+    height: 24px;
+    width: 24px;
+}
+
+.itf_icons_container.medium i {
+    font-size: 24px;
+    line-height: 24px;
+}
+.itf_icons_container.large {
+    height: 32px;
+    width: 32px;
+}
+
+.itf_icons_container.large i {
+    font-size: 32px;
+    line-height: 32px;
+}
+
+
+/*
+** Fields
+ */
+
+.settings_field_container {
+    margin-bottom: 16px;
+}
+
+.settings_field_container_flex {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.regular_field_description {
+    font-size: 12px;
+    font-weight: 600;
+    color: #666;
+    display: flex;
+    align-items: end;
+    padding-bottom: 2px;
+}
+
+.regular_field_description button {
+    margin-right: 8px !important;
+}
+
+.regular_field {
+    display: inline-block;
+    min-width: 300px;
+    max-width: 800px;
+    min-height: 40px;
+    border: 1px solid #ccc;
+    padding: 10px 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 16px;
+    box-sizing: border-box;
+}
+
+.regular_field.hidetext {
+    -webkit-text-security: disc;
+}
+
+
+.regular_field:focus {
+    box-shadow: 0 0 4px #3abdeb;
+}
+
+.regular_field[contenteditable=true]:empty:before {
+    content: attr(data-placeholder);
+    display: block;
+    color: #ccc;
+    cursor: text;
+}
+
+.regular_field.textarea {
+    min-height: 40px;
+    height: 120px;
+    width: 300px;
+    resize: both;
+    overflow: auto;
+}
+
+[contenteditable=true] {
+    -moz-user-select: text !important;
+    word-wrap: break-word !important;
+}
+
+.itf_field[contenteditable=false]:empty:before {
+    content: attr(data-placeholder);
+    display: block;
+    color: #ccc;
+    cursor: text;
+}
+
+.itf_field[contenteditable=true]:empty:before{
+    content: attr(data-placeholder);
+    display: block;
+    color: #ccc;
+    cursor: text;
+}
+
+.object_title:hover[contenteditable='true'],
+.editable_small_green_percent:hover[contenteditable='true'],
+.editable_small_text:hover[contenteditable='true'] {
+    border-bottom: 2px dashed #ccc;
+}
+
+/*
+** ColorPicker clicker
+ */
+
+.choose_color {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+}
+
+
+/*
+** Descriptions
+ */
+
+.side_field_description {
+    font-size: 12px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    min-width: 100px;
+    display: inline-block;
+}
+
+.editable_small_green_percent {
+    font-size: 12px;
+    color: #00aa00;
+}
+
+.editable_small_green_percent:after {
+    content: "%";
+}
+
+.compare_cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-right: 30px;
+    position: relative;
+}
+
+.compare_line {
+    display: flex;
+    width: 100%;
+}
+
+.remove_this_field {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.remove_this_field i {
+    line-height: 32px !important;
+}
+
+.search_input {
+    position: relative;
+}
+
+.search_input:after {
+    content: ' ';
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 8px;
+    background-image: url('https://cdn4.iconfinder.com/data/icons/pictype-free-vector-icons/16/search-128.png');
+    background-size: cover;
+}
+
+/** Tabs **/
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 250px;
+}
+
+.tabs_line {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.tab_button {
+    font-size: 18px;
+    color: #999;
+    border-bottom: 1px solid #ccc;
+    padding: 8px 16px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.tab_button:hover {
+    color: #000;
+    background: #ccc;
+}
+
+.tab_button:last-of-type {
+    border-bottom: none;
+}
+
+.tab_button.current {
+    background: #16d5cd;
+    color: #fff;
+}
+
+.tab_button.current:hover {
+    background: #00b6d5;
+    color: #ccc;
+}
+
+.tab_wrap {
+    width: 100%;
+    position: relative;
+}
+
+.tab_container {
+    padding: 8px 16px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s;
+    position: absolute;
+}
+
+.tab_container.current {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s, visibility 0.6s;
+}
+
+
+/*
+** DropDown's
+ */
+
+
+.itf_dropdown {
+    min-width: 300px;
+    position: relative;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    padding: 10px 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.itf_dropdown__field {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.itf_dropdown__arrow {
+    transition: transform 0.5s;
+    flex-shrink: 0;
+}
+.itf_dropdown.open .itf_dropdown__arrow {
+    transform: rotate(180deg);
+}
+
+.itf_dropdown__preview {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: -46px;
+    top: -2px;
+}
+.itf_dropdown__preview svg {
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+}
+
+.itf_dropdown__list {
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    // flex-direction: column;
+    flex-flow: row wrap;
+    align-items: stretch;
+    top: 45px;
+    left: -2px;
+    background-color: #fff;
+    min-width: 300px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    z-index: 20;
+    border-radius: 4px;
+    transition: 0.4s;
+    opacity: 0;
+}
+.itf_dropdown.open .itf_dropdown__list {
+    visibility: visible;
+    opacity: 1;
+}
+
+.itf_dropdown__row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 10px 44px;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.itf_dropdown__row:hover {
+    background-color: #BBD3FFcc;
+}
+
+.itf_dropdown__row.disabled {
+    background-color: #aaaaaacc;
+}
+
+.itf_dropdown__row.disabled:hover {
+    background-color: #aaaaaacc;
+}
+
+.itf_dropdown__row.checked {
+
+}
+
+.itf_dropdown__row.checked .CheckBox {
+
+}
+
+.itf_dropdown__row.checked .RadioButton {
+
+}
+
+.itf_dropdown__cell {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+.itf_dropdown__cell svg {
+    width: 32px;
+    height: 32px;
+    display: block;
+    margin: 9px;
+    fill: #ababab;
+}
+
+.itf_dropdown__cell svg:hover {
+    fill: #434343;
+}
+
+.my_dropdown {
+    margin: 50px 0 50px 50px;
+}
+
+/*
+ * Dropdown Radials
+ */
+
+.itf_radio {
+    display: inline-block;
+    // border: 1px solid #444444;
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #888888;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.5s;
+}
+
+.itf_radio.small {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.itf_radio.medium {
+    width: 24px;
+    height: 24px;
+    border-radius:24px;
+}
+
+.itf_radio.large {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+}
+.itf_dropdown__row .itf_radio {
+    position: absolute;
+    left: 19px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.itf_radio:hover .fa_icon{
+    color: #8888aa;
+}
+
+.itf_dropdown__row.checked .itf_radio {
+    color: #229922;
+    background-color: #229922;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 3px #229922;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+.itf_dropdown__row.checked:hover .itf_radio {
+    opacity: 0.3;
+}
+.itf_dropdown__row:not(.checked):hover .itf_radio {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+/*Use fa_icon.micro for making radio check*/
+.itf_dropdown__row.checked .fa_icon {
+    display: block;
+    position: absolute;
+    color: #229922;
+}
+.itf_dropdown__row.checked .fa_icon:hover {
+    color: #88aa88;
+}
+
+.itf_radio:hover {
+    border: 1px solid #8888aa;
+    color: #88aa88;
+}
+.itf_checkbox__description {
+    display: inline-block;
+    padding-left: 8px;
+    vertical-align: top;
+    line-height: 28px;
+}
+
+/*
+ * Dropdown Check buttons
+ */
+
+.itf_check {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 2px;
+    border: 1px solid #888888;
+    width: 20px !important;
+    height: 20px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.itf_check svg {
+    fill: transparent;
+}
+.itf_dropdown__row.checked .itf_check {
+    border-color: #229922;
+}
+.itf_dropdown__row.checked .itf_check svg {
+    fill: #229922;
+}
+.itf_dropdown__row:not(.checked):hover .itf_check svg {
+    fill: rgba(0, 0, 0, 0.3);
+}
